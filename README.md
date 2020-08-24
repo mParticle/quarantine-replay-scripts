@@ -6,4 +6,4 @@ This repository contains scripts to get started replay data that has been sent t
 
 This repository contains scripts, organized by language.  Within each folder you will find instructions for getting started.
 
-* [nodejs](./nodejs/README.md)
+* [nodejs](./nodejs)

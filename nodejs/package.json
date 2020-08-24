@@ -1,0 +1,11 @@
+{
+  "name": "mparticle.quarantine.replay",
+  "version": "0.0.1",
+  "description": "The ability to playback quarantine events, attributes, and identities into the mParticle event endpoints.",
+  "main": "index.js",
+  "author": "Kevin Prudente",
+  "license": "MIT",
+  "dependencies": {
+    "mparticle": "^1.0.6"
+  }
+}

@@ -1,0 +1,132 @@
+{
+    "events": [
+        {
+            "data": {
+                "custom_event_type": "navigation",
+                "event_name": "blocked navigation event 1",
+                "custom_flags": {},
+                "timestamp_unixtime_ms": "1599790566900",
+                "event_id": "-7778608565459706417",
+                "custom_attributes": {
+                    "Test": "value"
+                }
+            },
+            "event_type": "custom_event"
+        },
+        {
+            "data": {
+                "custom_event_type": "navigation",
+                "event_name": "blocked navigation event 2",
+                "custom_flags": {},
+                "timestamp_unixtime_ms": "1599790566900",
+                "event_id": "-387480379075294677",
+                "custom_attributes": {
+                    "testAttr1": "value"
+                }
+            },
+            "event_type": "custom_event"
+        },
+        {
+            "data": {
+                "custom_event_type": "other",
+                "event_name": "allowed event",
+                "custom_flags": {},
+                "timestamp_unixtime_ms": "1599790566900",
+                "event_id": "8561854144327985348",
+                "custom_attributes": {
+                    "testAttr1": "value"
+                }
+            },
+            "event_type": "custom_event"
+        }
+    ],
+    "device_info": {
+        "is_dst": false,
+        "ios_advertising_id": "613ff528-afd1-4c1b-9628-e6ed25ece9c0",
+        "push_token": "<e481f135 9629f0c3 fb634be0 82ca18b1 73ea45a2 b0b96a6e 2a00c829 bc9ff6eb>"
+    },
+    "application_info": {
+        "os": "OutOfBand"
+    },
+    "user_attributes": {
+        "$gender": "M",
+        "$age": "40"
+    },
+    "deleted_user_attributes": [],
+    "user_identities": {
+        "customer_id": "1234",
+        "email": "helpers@mparticle.com",
+        "facebook": "helpers@mparticle.com",
+        "twitter": "helpers@mparticle.com",
+        "google": "helpers@mparticle.com",
+        "microsoft": "helpers@mparticle.com",
+        "other": "helpers@mparticle.com",
+        "other_id_2": "helpers2@example.com",
+        "other_id_3": "helpers3@example.com",
+        "other_id_4": "helpers4@example.com",
+        "other_id_5": "helpers5@example.com",
+        "other_id_6": "helpers6@example.com",
+        "other_id_7": "helpers7@example.com",
+        "other_id_8": "helpers8@example.com",
+        "other_id_9": "helpers9@example.com",
+        "other_id_10": "helpers10@example.com",
+        "mobile_number": "800-555-1111",
+        "phone_number_2": "800-555-2222",
+        "phone_number_3": "800-555-3333"
+    },
+    "environment": "development",
+    "ip": "",
+    "source_info": {
+        "channel": "partner",
+        "partner": "Generic S2S"
+    },
+    "timestamp_unixtime_ms": "1599790566900",
+    "batch_id": "-5158959812941698317",
+    "context": {
+        "data_plan": {
+            "plan_id": "main_block",
+            "plan_version": 1,
+            "block_metadata": {
+                "dto_version": 1,
+                "blocked_user_identities": [
+                    "customer_id",
+                    "facebook",
+                    "google",
+                    "microsoft",
+                    "mobile_number",
+                    "other",
+                    "other_id_10",
+                    "other_id_2",
+                    "other_id_3",
+                    "other_id_4",
+                    "other_id_5",
+                    "other_id_6",
+                    "other_id_7",
+                    "other_id_8",
+                    "other_id_9",
+                    "phone_number_2",
+                    "phone_number_3",
+                    "twitter"
+                ],
+                "blocked_device_identities": [
+                    "ios_advertising_id"
+                ],
+                "blocked_event_ids": [
+                    "-7778608565459706417",
+                    "-387480379075294677"
+                ],
+                "blocked_event_attributes": [
+                    {
+                        "event_id": "8561854144327985348",
+                        "event_attributes": [
+                            "./data/custom_attributes/testAttr1"
+                        ]
+                    }
+                ],
+                "blocked_user_attributes": [
+                    "$gender"
+                ]
+            }
+        }
+    }
+}

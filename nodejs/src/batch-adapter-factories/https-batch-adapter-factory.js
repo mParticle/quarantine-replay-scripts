@@ -5,7 +5,7 @@ class HttpsBatchAdapterFactory {
     static passthroughBatchAdapter = new PassthroughBatchAdapter();
     static v001ToJsonBatchAdapter = new V001ToJsonBatchAdapter();
     static get(batch) {
-        if(batch.blocked_user_identities) {
+        if(batch.context.data_plan.block_metadata) {
             return HttpsBatchAdapterFactory.v001ToJsonBatchAdapter;
         }
         return HttpsBatchAdapterFactory.passthroughBatchAdapter;

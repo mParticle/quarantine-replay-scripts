@@ -1,11 +1,11 @@
 const ArrayUtils = require("./array-utils");
 
 class ObjectUtils {
-    static removeProperty(obj, propertyName) {
+    static AccessProperty(obj, propertyName, objKeyValueCallbackFn) {
         if(!obj || !propertyName) return;
-        delete obj[propertyName];
+        if(objKeyValueCallbackFn) objKeyValueCallbackFn(obj, propertyName, obj[propertyName]);
     }
-    static removePropertyByPath(obj, propertyPath) {
+    static AccessPropertyByPath(obj, propertyPath, objKeyValueCallbackFn) {
         if(!obj || !propertyPath) return;
         if(propertyPath.indexOf('./') === 0) {
             propertyPath = propertyPath.substr(2);
@@ -19,12 +19,12 @@ class ObjectUtils {
             leafObject = leafObject[propertyName];
             propertyNameIndex++;
         }
-        ObjectUtils.removeProperty(leafObject, propertyNames[propertyNames.length - 1]);
+        ObjectUtils.AccessProperty(leafObject, propertyNames[propertyNames.length - 1], objKeyValueCallbackFn);
     }
-    static removeProperties(obj, ...propertyNames) {
-        if(!obj || ArrayUtils.isFalseOrEmpty(propertyNames)) return;
+    static accessProperties(obj, propertyNames, objKeyValueCallbackFn) {
+        if(!obj || ArrayUtils.IsFalseOrEmpty(propertyNames)) return;
         for(const propertyName in propertyNames) {
-            ObjectUtils.removeProperty(obj, propertyName);
+            ObjectUtils.AccessProperty(obj, propertyName, objKeyValueCallbackFn);
         }
     }
 }

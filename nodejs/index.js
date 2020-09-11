@@ -10,14 +10,13 @@ const quarantineBatchFileString = fs.readFileSync(argv[2]);
 /**
  * Get block metadata
  */
-const quarantineBatch = JSON.parse(quarantineBatchFileString);
-const blockMetadata = quarantineBatch.context.data_plan.block_metadata;
+const batchObj = JSON.parse(quarantineBatchFileString);
+const blockMetadata = batchObj.context.data_plan.block_metadata;
 if(blockMetadata.dto_version != 1) throw new Error("This example script only works when 'dto_version' is 1.");
 
 /**
  * Create a new object containing the missing events
  */
-const batchObj = JSON.parse(JSON.stringify(quarantineBatch));
 batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.includes(e.data.event_id));
 
 // batchObj.events now contains the events that were blocked

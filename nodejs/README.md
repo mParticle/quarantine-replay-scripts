@@ -8,4 +8,4 @@ This script can be run with a variety of different input methods.  Your input me
 
 ### From Files
 
-`node index.js <file1.json> <file2.json> ...`
+`node index.js <file.json>`

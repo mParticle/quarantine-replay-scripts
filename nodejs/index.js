@@ -58,6 +58,7 @@ batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.in
  * Send a new batch
  */
 const batch = new mParticle.Batch.constructFromObject(batchObj);
+batch.events.forEach(batchEvent => batchEvent.data.event_name = batchObj.events.find(e => e.data.event_id == batchEvent.data.event_id).data.event_name);
 const api = new mParticle.EventsApi(new mParticle.Configuration(
     'REPLACE WITH API KEY', 
     'REPLACE WITH API SECRET'));

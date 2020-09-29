@@ -22,8 +22,14 @@ batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.in
 // batchObj.events now contains the events that were blocked
 // this is where you might do some event fixup
 
+ //***********************************
+// SCENARIO: if you want to fix an event blocked due to an incorrect event name
+// and reupload with the correct name
+// batchObj.events = batchObj.events.filter(e => e.event_type === "custom_event" && e.data.event_name === "Incorrect Name");
+// batchObj.events.forEach(e => e.data.event_name = "Correct Name");
+
 //***********************************
-// SCENARIO: if you want to add unblocked user_attributes
+// SCENARIO: if you want to add blocked user_attributes
 // batchObj.user_attributes = Object.entries(batchObj.user_attributes || {})
 //     .reduce((prev, [key, value]) => {
 //         if(!blockMetadata.blocked_user_attributes.includes(key)) {
@@ -33,7 +39,7 @@ batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.in
 //     }, {});
 
 //***********************************
-// SCENARIO: if you want to add unblocked user_identities
+// SCENARIO: if you want to add blocked user_identities
 //
 // batchObj.user_identities = Object.entries(batchObj.user_identities || {})
 //     .reduce((prev, [key, value]) => {
@@ -44,7 +50,7 @@ batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.in
 //     }, {});
 
 //***********************************
-// SCENARIO: if you want to add unblocked device_info values
+// SCENARIO: if you want to add blocked device_info values
 //
 // batchObj.device_info = Object.entries(batchObj.device_info || {})
 //     .reduce((prev, [key, value]) => {

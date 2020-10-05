@@ -2,9 +2,9 @@
 
 This repository contains scripts to get started replaying data that has been sent to a Quarantine connection.
 
-[Get Started](https://docs.mparticle.com/developers/data-master/#getting-started) with data planning and setting up a quarantine connection.
+[Get Started](https://docs.mparticle.com/guides/data-master/#getting-started) with data planning and setting up a quarantine connection.
 
-If you have already set up a quarantine connection and are ready to replay data, see our [Self Data Backfill Guide](https://docs.mparticle.com/developers/data-master/self-data-backfill-guide) for help on using these scripts.
+If you have already set up a quarantine connection and are ready to replay data, see our [Self Data Backfill Guide](https://docs.mparticle.com/guides/data-master/blocked-data-backfill-guide) for help on using these scripts.
 
 ## Repository Structure
 

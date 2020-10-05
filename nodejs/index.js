@@ -61,7 +61,8 @@ batchObj.events = batchObj.events.filter(e => blockMetadata.blocked_event_ids.in
 //     }, {});
 
 /**
- * Send a new batch
+ * Send a new batch 
+ * -- this part is important as it clears the batch_id associated with the blocked batch to avoid deduplication.
  */
 const batch = new mParticle.Batch.constructFromObject(batchObj);
 batch.events.forEach(batchEvent => batchEvent.data.event_name = batchObj.events.find(e => e.data.event_id == batchEvent.data.event_id).data.event_name);
